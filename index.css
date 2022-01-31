@@ -1,0 +1,14 @@
+body {
+  background-color: purple;
+}
+
+
+textarea {
+  margin-top: 50px;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}

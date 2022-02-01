@@ -8,6 +8,11 @@ textarea {
   margin: auto;
 }
 
+textarea:focus {
+  background: green;
+
+}
+
 .container {
   display: flex;
   justify-content: center;

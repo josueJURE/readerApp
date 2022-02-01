@@ -6,17 +6,16 @@
     <title></title>
   </head>
   <body>
-    <textarea name="name" rows="30" cols="100"></textarea>
+    <textarea id="text" name="name" rows="30" cols="100"></textarea>
 
     <div class="container">
-      <input type="number" min="0" step="1" max="10">
-      <button type="button" name="button">Read</button>
-      <button type="button" name="button">Pause</button>
-      <button type="button" name="button">Stop</button>
+      <label for="speed">Speed</label>
+      <input id="speed" type="number" min="0" step="1" max="10">
+      <button id="read" type="button" name="button">Read</button>
+      <button id="pause" type="button" name="button">Pause</button>
+      <button id="stop" type="button" name="button">Stop</button>
 
     </div>
-
-
-
   </body>
+  <script src="index.js" charset="utf-8"></script>
 </html>

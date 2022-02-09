@@ -9,6 +9,11 @@ read.addEventListener("click", () => {
   readText(text.value)
 });
 
+pause.addEventListener("click", () => {
+  pauseText();
+});
+
+
 
 var utterThis = new SpeechSynthesisUtterance();
 
@@ -19,4 +24,8 @@ function readText(text) {
   utterThis.rate = speed.value || 1;
   text.disabled = true;
   speechSynthesis.speak(utterThis)
+}
+
+function pauseText() {
+  speechSynthesis.pause();
 }

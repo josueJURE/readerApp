@@ -14,18 +14,27 @@ pause.addEventListener("click", () => {
 });
 
 
+function readText(dummy) {
+  var utterThis = new SpeechSynthesisUtterance(dummy);
+  if(speechSynthesis.speaking && speechSynthesis.paused) {
+    return speechSynthesis.resume()
+  }
 
-var utterThis = new SpeechSynthesisUtterance();
+  if(speechSynthesis.speaking) return;
+
+  console.log(utterThis)
+  console.log(speechSynthesis)
 
 
-
-function readText(text) {
-  utterThis.text = text;
-  utterThis.rate = speed.value || 1;
+  utterThis.text = dummy;
+  utterThis.rate = speed.value
   text.disabled = true;
   speechSynthesis.speak(utterThis)
+  utterThis.addEventListener("end", () => {
+    text.disabled = false
+  })
 }
 
 function pauseText() {
-  speechSynthesis.pause();
+  if(speechSynthesis.speaking)  speechSynthesis.pause();
 }
